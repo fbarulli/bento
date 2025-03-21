@@ -1,0 +1,19 @@
+service: "src.service:rf_service"
+description: "Random Forest Classifier Service for predicting accidents"
+labels:
+  owner: "your_name"
+  project: "accident_prediction"
+
+include:
+  - src/
+  - data/
+
+python:
+  packages:
+    - numpy
+    - pandas
+    - scikit-learn
+    - bentoml
+    - pydantic
+    - requests
+    - pyjwt
